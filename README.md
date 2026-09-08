@@ -23,6 +23,19 @@ Cada usuario puede consultar y compartir sus propias configuraciones, explorar l
 
 ---
 
+## 🔐 Credenciales de demostración
+
+Para probar las funcionalidades de administración de la aplicación:
+
+**Administrador**
+- Usuario: `rodrigo@correo.com`
+- Contraseña: `1234`
+
+> Estas credenciales corresponden únicamente a una cuenta de demostración del proyecto.
+
+
+---
+
 ## 🛠️ Tecnologías utilizadas
 
 | Tecnología          | Uso                         |
