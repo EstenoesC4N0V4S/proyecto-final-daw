@@ -95,15 +95,14 @@ Contraseña: 1234
 | **CSS3**            | Estilos y diseño                       |
 | **JavaScript**      | Funcionalidades dinámicas              |
 | **Bootstrap 5**     | Diseño responsive                      |
-| **SCSS**            | Preprocesamiento de CSS                |
 | **PHP**             | Backend y lógica de negocio            |
 | **MySQL / MariaDB** | Gestión de la base de datos            |
 | **PDO**             | Acceso a la base de datos              |
 | **AJAX**            | Peticiones asíncronas                  |
 | **MVC**             | Arquitectura del proyecto              |
-| **Composer**        | Gestión de dependencias                |
-| **Chart.js**        | Gráficos y telemetría                  |
-| **AOS**             | Animaciones                            |
+| **Composer**        | Gestión de dependencias(pendiente de introducir)               |
+| **GSAP**            | Animaciones de los coches en el circuito                  |
+| **AOS**             | Animaciones de scroll                        |
 | **Figma**           | Diseño y prototipado                   |
 | **Modelos 3D**      | Visualización interactiva de vehículos |
 
