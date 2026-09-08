@@ -6,7 +6,7 @@ El proyecto combina información sobre la Fórmula 1 con un sistema de **gestió
 
 Cada usuario puede consultar y compartir sus propias configuraciones, explorar los setups creados por otros jugadores y acceder a una **tienda online** con catálogo de productos y carrito de compra.
 
-🌐 **Proyecto online:** `URL_DEL_PROYECTO`
+🌐 **Proyecto online:** `https://f1setupsim.infinityfreeapp.com/login`
 
 ---
 
