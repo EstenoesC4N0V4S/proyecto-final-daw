@@ -6,37 +6,79 @@ El proyecto combina información sobre la Fórmula 1 con un sistema de **gestió
 
 Cada usuario puede consultar y compartir sus propias configuraciones, explorar los setups creados por otros jugadores y acceder a una **tienda online** con catálogo de productos y carrito de compra.
 
+🌐 **Proyecto online:** `URL_DEL_PROYECTO`
+
 ---
 
-## 🚀 Funcionalidades
+### 🚀 Funcionalidades principales
 
-* 🏎️ Gestión y consulta de información relacionada con la Fórmula 1.
-* ⚙️ Creación y gestión de setups para los coches.
+#### 🏎️ Gestión de setups
+
+* ⚙️ Creación y gestión de setups personalizados.
+* 🔧 Configuración de diferentes parámetros del vehículo.
+* 📋 Consulta de setups creados por otros usuarios.
+* 🔄 Edición y eliminación de setups propios.
+* 🏁 Configuración según circuito y condiciones.
 * 📊 Visualización de datos y telemetría mediante gráficos.
-* 👤 Registro, inicio de sesión y gestión de usuarios.
-* 🛒 Tienda online con catálogo de productos.
-* 🛍️ Carrito de compra.
-* 👨‍💼 Panel de administración.
-* 📦 Gestión y consulta de pedidos.
-* 🔄 Funcionalidades dinámicas mediante AJAX.
-* 📱 Diseño responsive adaptado a diferentes dispositivos.
+
+#### 👤 Usuarios y seguridad
+
+* 📝 Registro de usuarios.
+* 🔐 Inicio y cierre de sesión.
+* 👤 Gestión de cuentas de usuario.
+* 🔒 Sistema de autenticación y autorización.
+* 🛡️ Protección de URLs y rutas según el tipo de usuario.
+* 👨‍💼 Rutas y funcionalidades exclusivas para administradores.
+* 👤 Restricción de determinadas funcionalidades para usuarios normales.
+* 🚫 Los usuarios normales no pueden acceder a las rutas reservadas para administradores.
+* 🔐 Control de permisos según el rol del usuario.
+
+#### 🛒 Tienda online
+
+* 🛍️ Catálogo de productos.
+* 🔎 Consulta de productos.
+* 🛒 Añadir productos al carrito.
+* ➕ Modificación de cantidades.
+* 🗑️ Eliminación de productos del carrito.
+* 💳 Gestión del proceso de compra.
+* 📦 Consulta de pedidos.
+
+#### 👨‍💼 Panel de administración
+
+* 👥 Gestión de usuarios.
+* 📦 Gestión de productos.
+* 🛒 Gestión de pedidos.
+* ⚙️ Gestión de la información de la aplicación.
+* 🔐 Acceso protegido mediante control de permisos.
+* 📊 Administración de los datos almacenados.
+
+#### ⚡ Funcionalidades dinámicas
+
+* 🔄 Peticiones asíncronas mediante AJAX.
+* 📊 Gráficos y telemetría con Chart.js.
+* ⏳ Actualización dinámica de información.
+* ❌ Validación de datos y gestión de errores.
+* 📱 Diseño responsive.
+* 🎨 Animaciones mediante AOS.
 
 ---
 
-## 🔐 Credenciales de demostración
+### 🔐 Credenciales de demostración
 
 Para probar las funcionalidades de administración de la aplicación:
 
 **Administrador**
-- Usuario: `rodrigo@correo.com`
-- Contraseña: `1234`
+
+```text
+Usuario: rodrigo@correo.com
+Contraseña: 1234
+```
 
 > Estas credenciales corresponden únicamente a una cuenta de demostración del proyecto.
 
-
 ---
 
-## 🛠️ Tecnologías utilizadas
+### 🛠️ Tecnologías utilizadas
 
 | Tecnología          | Uso                         |
 | ------------------- | --------------------------- |
@@ -46,8 +88,8 @@ Para probar las funcionalidades de administración de la aplicación:
 | **Bootstrap 5**     | Diseño responsive           |
 | **SCSS**            | Preprocesamiento de CSS     |
 | **PHP**             | Backend y lógica de negocio |
-| **MySQL / MariaDB** | Base de datos               |
-| **PDO**             | Acceso a base de datos      |
+| **MySQL / MariaDB** | Gestión de la base de datos |
+| **PDO**             | Acceso a la base de datos   |
 | **AJAX**            | Peticiones asíncronas       |
 | **MVC**             | Arquitectura del proyecto   |
 | **Composer**        | Gestión de dependencias     |
@@ -57,19 +99,19 @@ Para probar las funcionalidades de administración de la aplicación:
 
 ---
 
-## 🏗️ Arquitectura
+### 🏗️ Arquitectura
 
-El proyecto utiliza el patrón de arquitectura **MVC (Modelo-Vista-Controlador)**, separando:
+El proyecto utiliza el patrón de arquitectura **MVC (Modelo-Vista-Controlador)**, separando las diferentes responsabilidades de la aplicación:
 
 * **Modelo:** gestión de datos y comunicación con la base de datos.
 * **Vista:** interfaz y presentación de la información.
-* **Controlador:** lógica de negocio y comunicación entre modelos y vistas.
+* **Controlador:** gestión de la lógica de negocio y comunicación entre modelos y vistas.
 
 Esta arquitectura permite mantener una aplicación más **organizada, escalable y fácil de mantener**.
 
 ---
 
-## ⚙️ Instalación
+### ⚙️ Instalación
 
 Para ejecutar el proyecto en local:
 
@@ -99,7 +141,15 @@ Acceder a **phpMyAdmin**, crear la base de datos e importar el archivo `.sql` in
 
 Configurar los datos de conexión a la base de datos en el archivo correspondiente del proyecto.
 
-### 6. Acceder a la aplicación
+### 6. Instalar dependencias
+
+Si el proyecto utiliza Composer:
+
+```bash
+composer install
+```
+
+### 7. Acceder a la aplicación
 
 Abrir el navegador y acceder mediante:
 
@@ -109,7 +159,7 @@ http://localhost/proyecto-final-daw
 
 ---
 
-## 📂 Estructura del proyecto
+### 📂 Estructura del proyecto
 
 ```text
 proyecto-final-daw/
@@ -135,21 +185,25 @@ proyecto-final-daw/
 
 ---
 
-## 🎓 Proyecto Final DAW
+### 🎓 Proyecto Final DAW
 
-Proyecto desarrollado como parte del **Grado Superior en Desarrollo de Aplicaciones Web**, con el objetivo de aplicar de forma práctica los conocimientos adquiridos durante el ciclo en:
+Proyecto desarrollado como parte del **Grado Superior en Desarrollo de Aplicaciones Web**, aplicando los conocimientos adquiridos durante el ciclo en:
 
 * Desarrollo frontend.
 * Desarrollo backend.
 * Bases de datos.
 * Arquitectura MVC.
 * Diseño responsive.
-* Gestión de usuarios.
+* Autenticación y autorización.
+* Control de acceso mediante roles.
 * Desarrollo de aplicaciones web dinámicas.
+* Peticiones AJAX.
+* Gestión de usuarios.
+* Desarrollo de una tienda online.
 
 ---
 
-## 👨‍💻 Autor
+### 👨‍💻 Autor
 
 **Rodrigo Cánovas Moreta**
 
@@ -158,3 +212,4 @@ Proyecto desarrollado con fines académicos y como parte de mi **portfolio profe
 ---
 
 ⭐ Si te gusta el proyecto, ¡no dudes en darle una estrella al repositorio!
+
