@@ -129,7 +129,7 @@ Para ejecutar el proyecto en local:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone URL_DEL_REPOSITORIO
+git clone proyecto-final-daw
 ```
 
 ### 2. Instalar XAMPP
