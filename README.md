@@ -22,6 +22,8 @@ Además, la aplicación incorpora **modelos 3D interactivos de vehículos**, per
 * 🔄 Edición y eliminación de setups propios.
 * 🏁 Configuración según circuito y condiciones.
 * 📊 Visualización de datos y telemetría mediante gráficos.
+* 🛣️ Animación interactiva de los circuitos mediante **GSAP**, con gestión y manipulación de elementos **SVG**.
+
 
 #### 🧊 Modelos 3D
 
