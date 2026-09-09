@@ -168,26 +168,35 @@ http://localhost/proyecto-final-daw
 
 ---
 
-### 📂 Estructura del proyecto
+### 📁 Estructura del proyecto
 
 ```text
-proyecto-final-daw/
+ProyectoTFG/
 │
-├── app/
-│   ├── controllers/
-│   ├── models/
-│   └── views/
+├── 📂 assets/
+│   ├── 📂 models3D/       # Modelos 3D utilizados en la aplicación
+│   ├── 📂 video/          # Vídeos
+│   ├── 📂 img/            # Imágenes
+│   ├── 📂 style/          # Hojas de estilos CSS/SCSS
+│   ├── 📂 fonts/          # Fuentes
+│   └── 📂 js/             # JavaScript y funcionalidades del cliente
 │
-├── public/
-│   ├── css/
-│   ├── js/
-│   └── img/
+├── 📂 src/
+│   ├── 📂 Views/          # Vistas de la aplicación
+│   ├── 📂 Controllers/    # Controladores
+│   ├── 📂 Models/         # Modelos y lógica de datos
+│   ├── 📂 Lib/            # Librerías y funcionalidades auxiliares
+│   ├── 📂 Database/       # Configuración y conexión con la base de datos
+│   └── 📂 Config/         # Configuración general de la aplicación
 │
-├── config/
-├── database/
-├── vendor/
-├── composer.json
-└── README.md
+├── 📂 vendor/             # Dependencias gestionadas por Composer
+│   └── autoload.php       # Autocargador de Composer
+│
+├── 📂 tests/
+│   └── 📂 Database/       # Pruebas relacionadas con la base de datos
+│
+├── 📄 index.php           # Punto de entrada principal
+└── 📄 .htaccess           # Configuración y protección de rutas
 ```
 
 ---
