@@ -227,6 +227,7 @@ Proyecto desarrollado como parte del **Grado Superior en Desarrollo de Aplicacio
 
 Proyecto desarrollado con fines académicos y como parte de mi **portfolio profesional**.
 
+Hecho con ❤️ para todos los fans del mundo del motor.
 ---
 
 ⭐ Si te gusta el proyecto, ¡no dudes en darle una estrella al repositorio!
