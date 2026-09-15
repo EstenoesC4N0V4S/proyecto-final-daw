@@ -225,7 +225,7 @@ Proyecto desarrollado como parte del **Grado Superior en Desarrollo de Aplicacio
 
 **Rodrigo Cánovas Moreta**  
 <small>Proyecto desarrollado con fines académicos y como parte de mi portfolio profesional.</small>  
-<small>`[ 🔒 Sello de autoría: R. Cánovas ]` Hecho con ❤️ para todos los fans del mundo del motor.</small>
+<small>`[ ⛽ FULL THROTTLE ]` Compilado a gas y sin mirar atrás. Hecho con ❤️ para los fans de los coches... y para los que no lo son tanto.</small>
 
 ---
 
