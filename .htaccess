@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /Proyecto_TFG/
+
+# Si el archivo o carpeta existe, no tocarlo
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Ruta por defecto (home)
+RewriteRule ^$ index.php?accion=home [L,QSA]
+
+# Todas las rutas pasan por el router
+RewriteRule ^(.+)$ index.php?accion=$1 [L,QSA]

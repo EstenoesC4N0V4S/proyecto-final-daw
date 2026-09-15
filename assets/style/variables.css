@@ -1,0 +1,182 @@
+:root {
+  /* =========================
+     BASE / BRAND
+     ========================= */
+
+  --fondo: #0b0a0a;
+  --fondo-claro: #ffffff;
+
+  --texto: #f4eeee;
+  --texto-oscuro: #1b1f24;
+
+  --texto-suave: rgba(244, 238, 238, 0.72);
+  --texto-suave-oscuro: rgba(27, 31, 36, 0.72);
+
+  --acento: #e10600;
+  --acento-hover: #ff2a22;
+  --acento-strong: #b00000;
+  --acento-deep: #6e0000;
+
+  /* =========================
+     COLORES SECUNDARIOS
+     ========================= */
+
+  --acento-2: #7a0c0c;
+  --acento-2-suave: rgba(122, 12, 12, 0.18);
+
+  --exito: #00d26a;
+  --warning: #ffb300;
+
+  /* =========================
+     SUPERFICIES
+     ========================= */
+
+  --barra: rgba(24, 10, 10, 0.68);
+  --barra-clara: rgba(255, 255, 255, 0.85);
+
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-2: rgba(255, 255, 255, 0.04);
+
+  --surface-dark: rgba(17, 8, 8, 0.96);
+  --surface-dark-2: rgba(15, 8, 8, 0.82);
+  --surface-dark-3: rgba(8, 4, 4, 0.76);
+  --surface-card-dark:
+    linear-gradient(180deg, rgba(15, 8, 8, 0.82), rgba(8, 4, 4, 0.76));
+
+  --surface-soft-dark:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.04)),
+    rgba(255, 255, 255, 0.04);
+
+  /* =========================
+     PANEL CLARO
+     ========================= */
+
+  --panel: rgba(255, 255, 255, 0.96);
+
+  --textoPanel: #1b1f24;
+  --textoPanel-suave: rgba(27, 31, 36, 0.72);
+
+  /* =========================
+     TEXTOS EXTRA
+     ========================= */
+
+  --texto-dark-title: #ffffff;
+  --texto-dark-body: rgba(255, 255, 255, 0.82);
+  --texto-dark-soft: rgba(255, 255, 255, 0.76);
+  --texto-dark-muted: rgba(255, 255, 255, 0.64);
+
+  --texto-indicador-dark: #ffffff;
+  --texto-indicador-label-dark: rgba(255, 255, 255, 0.66);
+
+  --texto-tooltip-dark: #ffffff;
+  --texto-card-dark: rgba(255, 255, 255, 0.84);
+
+  /*=========================
+     BOTONES EXTRA
+     =========================*/
+
+  --boton-secundario-dark-bg: rgba(255, 255, 255, 0.08);
+  --boton-secundario-dark-bg-hover: rgba(225, 6, 0, 0.12);
+  --boton-secundario-dark-text: #ffffff;
+
+  --boton-primario-dark:
+    linear-gradient(180deg, #ff2a22 0%, #d90400 58%, #7a0000 100%);
+
+  /* =========================
+     BORDES
+     ========================= */
+
+  --borde: rgba(255, 255, 255, 0.14);
+  --borde-suave: rgba(255, 255, 255, 0.08);
+  --borde-claro: rgba(0, 0, 0, 0.12);
+
+  --borde-dark: rgba(255, 255, 255, 0.1);
+  --borde-dark-soft: rgba(255, 255, 255, 0.08);
+  --borde-acento-dark: rgba(225, 6, 0, 0.42);
+
+  /* =========================
+     SOMBRAS
+     ========================= */
+
+  --sombra: 0 18px 46px rgba(0, 0, 0, 0.42);
+  --sombra-suave: 0 10px 26px rgba(0, 0, 0, 0.28);
+  --sombra-clara: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --sombra-dark-card:
+    0 20px 38px rgba(0, 0, 0, 0.28),
+    0 0 20px rgba(225, 6, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  --sombra-dark-soft:
+    0 14px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  --sombra-dark-tooltip:
+    0 12px 30px rgba(0, 0, 0, 0.42),
+    0 0 20px rgba(225, 6, 0, 0.06);
+
+  --sombra-acento:
+    0 16px 30px rgba(225, 6, 0, 0.24),
+    0 0 24px rgba(225, 6, 0, 0.12);
+
+  /* =========================
+     RADIOS
+     ========================= */
+
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 18px;
+  --r-xl: 22px;
+
+  /* =========================
+     ESPACIADOS
+     ========================= */
+
+  --sp-1: 6px;
+  --sp-2: 10px;
+  --sp-3: 14px;
+  --sp-4: 18px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+
+  /* =========================
+     GRADIENTES
+     ========================= */
+
+  --grad-fondo:
+    radial-gradient(circle at top center, rgba(225, 6, 0, 0.16), transparent 28%),
+    linear-gradient(180deg, #050505 0%, #0b0303 40%, #140606 100%);
+
+  --grad-fondo-dark-pro:
+    radial-gradient(circle at top center, rgba(225, 6, 0, 0.18), transparent 28%),
+    linear-gradient(180deg, #050505 0%, #090303 45%, #020202 100%);
+
+  --grad-panel-dark:
+    radial-gradient(circle at top center, rgba(225, 6, 0, 0.1), transparent 42%),
+    linear-gradient(180deg, rgba(14, 6, 6, 0.98), rgba(9, 3, 3, 0.99));
+
+  --grad-acento:
+    linear-gradient(180deg, #e10600 0%, #b00000 100%);
+
+  --grad-footer:
+    radial-gradient(
+      900px 420px at 12% 20%,
+      rgba(225, 6, 0, 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 520px at 88% 55%,
+      rgba(122, 12, 12, 0.16),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #050505 0%, #080202 45%, #120404 100%);
+
+  /* =========================
+     TRANSICIONES
+     ========================= */
+
+  --t-fast: 0.18s ease;
+  --t-med: 0.25s ease;
+  --t-slow: 0.35s ease;
+}

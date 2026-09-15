@@ -1,0 +1,833 @@
+@import url("variables.css");
+
+/* =========================
+   RESET / BASE
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--grad-fondo);
+  color: #fff;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --color-header-link: rgba(255, 255, 255, 0.88);
+  --color-header-link-hover: var(--acento);
+  --header-bg: var(--barra);
+  --header-border: rgba(255, 255, 255, 0.1);
+}
+
+body.modo-oscuro {
+  --color-header-link: #1b1f24;
+  --color-header-link-hover: var(--acento);
+  --header-bg: rgba(255, 255, 255, 0.96);
+  --header-border: rgba(0, 0, 0, 0.08);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+body,
+.barra-superior,
+.seccion-principal__izquierda,
+.login-icono,
+.boton-tema,
+.indicador,
+.boton,
+.logo-burger,
+.menu-f1-offcanvas,
+.menu-f1-mobile-nav a {
+  transition:
+    background 0.5s ease,
+    background-color 0.5s ease,
+    color 0.45s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.25s ease;
+}
+
+.login-icono {
+  position: relative;
+}
+
+.cart-header-count {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e10600;
+  color: #ffffff;
+  border: 2px solid var(--header-bg);
+  font-size: 0.68rem;
+  font-weight: 950;
+  line-height: 1;
+  box-shadow: 0 6px 14px rgba(225, 6, 0, 0.32);
+}
+
+.cart-header-link {
+  position: relative;
+}
+
+.menu-cart-link {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+}
+
+.cart-header-count--mobile {
+  position: static;
+  min-width: 21px;
+  height: 21px;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.barra-superior {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.barra-superior::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(225, 6, 0, 0),
+    rgba(225, 6, 0, 0.9),
+    rgba(0, 140, 255, 0.5),
+    rgba(225, 6, 0, 0)
+  );
+}
+
+.barra-superior__interior {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 28px;
+  margin-left: 45px;
+}
+
+.barra-superior a {
+  color: var(--color-header-link);
+  text-decoration: none;
+}
+
+.barra-superior a:hover {
+  color: var(--color-header-link-hover);
+}
+
+/* =========================
+   MARCA
+========================= */
+
+.marca,
+.marca-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.marca {
+  color: var(--color-header-link);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.marca__nombre {
+  color: var(--color-header-link);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  opacity: 0.95;
+  margin-right: 40px;
+  white-space: nowrap;
+}
+
+.marca__nombre:hover {
+  color: var(--acento);
+}
+
+.marca-logo-escritorio {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marca-logo-escritorio img {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.marca-logo-escritorio:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(225, 6, 0, 0.28));
+}
+
+/* =========================
+   BURGER LOGO
+========================= */
+
+.logo-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.logo-burger img {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 8px rgba(225, 6, 0, 0.12));
+}
+
+.logo-burger:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.logo-burger:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 12px rgba(225, 6, 0, 0.22));
+}
+
+.logo-burger:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   NAV DESKTOP
+========================= */
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  margin-right: auto;
+  margin-left: 35px;
+}
+
+.navegacion a,
+.navegacion__enlace {
+  position: relative;
+  color: var(--color-header-link);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 8px 2px;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.navegacion a:hover,
+.navegacion__enlace:hover {
+  color: var(--acento);
+}
+
+.navegacion a::after,
+.navegacion__enlace::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  background: var(--acento);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.navegacion a:hover::after,
+.navegacion__enlace:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========================
+   ACCIONES HEADER
+========================= */
+
+.acciones-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: 26px;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
+.login-icono,
+.boton-tema {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  color: var(--color-header-link);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+}
+
+body.modo-oscuro .login-icono,
+body.modo-oscuro .boton-tema {
+  color: #1b1f24;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f2f5 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.boton-tema {
+  cursor: pointer;
+}
+
+.login-icono i,
+.boton-tema i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.login-icono:hover,
+.boton-tema:hover {
+  color: var(--acento);
+  background: rgba(225, 6, 0, 0.12);
+  border-color: rgba(225, 6, 0, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(225, 6, 0, 0.15);
+}
+
+/* =========================
+   OFFCANVAS / MENÚ BURGER
+========================= */
+
+.menu-f1-offcanvas {
+  width: min(90vw, 380px) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu-f1-offcanvas .offcanvas-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu-f1-offcanvas .offcanvas-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-f1-offcanvas .offcanvas-body {
+  padding: 20px;
+}
+
+.menu-f1-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-f1-mobile-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px 14px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.menu-f1-mobile-nav a::before {
+  content: "";
+  width: 5px;
+  height: 22px;
+  margin-right: 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #e10600, #ff4b3e);
+}
+
+.menu-f1-mobile-nav a:hover {
+  transform: translateX(6px);
+}
+
+/* MODO CLARO BURGER */
+body:not(.modo-oscuro) .menu-f1-offcanvas {
+  background:
+    radial-gradient(circle at top left, rgba(225, 6, 0, 0.08), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%) !important;
+  color: #181818;
+}
+
+body:not(.modo-oscuro) .menu-f1-offcanvas .offcanvas-title {
+  color: #181818;
+}
+
+body:not(.modo-oscuro) .menu-f1-mobile-nav a {
+  color: #181818;
+  background:
+    linear-gradient(135deg, rgba(225, 6, 0, 0.07), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+body:not(.modo-oscuro) .menu-f1-mobile-nav a:hover {
+  color: #e10600;
+  border-color: rgba(225, 6, 0, 0.35);
+}
+
+/* MODO OSCURO BURGER */
+body.modo-oscuro .menu-f1-offcanvas {
+  background:
+    radial-gradient(circle at top left, rgba(225, 6, 0, 0.24), transparent 34%),
+    linear-gradient(180deg, #080808 0%, #180505 100%) !important;
+  color: #ffffff;
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .menu-f1-offcanvas .offcanvas-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .menu-f1-offcanvas .offcanvas-title {
+  color: #ffffff;
+}
+
+body.modo-oscuro .menu-f1-mobile-nav a {
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(225, 6, 0, 0.14), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+body.modo-oscuro .menu-f1-mobile-nav a:hover {
+  color: #ffffff;
+  border-color: rgba(225, 6, 0, 0.45);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.28),
+    0 0 22px rgba(225, 6, 0, 0.14);
+}
+
+/* =========================
+   HERO HOME
+========================= */
+
+.seccion-principal {
+  min-height: calc(100vh - 71px);
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+.seccion-principal__izquierda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 46px 32px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--textoPanel);
+}
+
+.texto-hero {
+  width: min(640px, 95%);
+  text-align: left;
+}
+
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  color: #2b2b2b;
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.insignia__punto {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  animation: estado-f1 1.8s infinite;
+}
+
+@keyframes estado-f1 {
+  0%,
+  100% {
+    background: #e10600;
+    box-shadow: 0 0 6px rgba(225, 6, 0, 0.6);
+  }
+
+  33% {
+    background: #ffb300;
+    box-shadow: 0 0 6px rgba(255, 179, 0, 0.6);
+  }
+
+  66% {
+    background: #00d26a;
+    box-shadow: 0 0 6px rgba(0, 210, 106, 0.6);
+  }
+}
+
+.texto-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -0.6px;
+}
+
+.texto-hero p {
+  max-width: 58ch;
+  margin: 0 0 14px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.fila-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 22px;
+}
+
+.boton {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+
+.boton:hover {
+  transform: translateY(-2px);
+}
+
+.boton--principal {
+  color: #fff;
+  background: linear-gradient(180deg, #e10600, #b00000);
+  box-shadow: 0 12px 26px rgba(225, 6, 0, 0.25);
+}
+
+.boton--secundario {
+  color: #242424;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.boton--secundario:hover {
+  color: var(--acento);
+  border-color: rgba(225, 6, 0, 0.55);
+}
+
+/* =========================
+   INDICADORES
+========================= */
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.indicador {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.indicador__numero {
+  margin: 0;
+  font-weight: 800;
+  color: #161616;
+  font-size: 18px;
+}
+
+.indicador__texto {
+  margin: 4px 0 0;
+  color: #5b5b5b;
+  font-size: 12px;
+}
+
+/* =========================
+   VIDEO HERO
+========================= */
+
+.seccion-principal__derecha {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-hero {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+/* =========================
+   MODO OSCURO GENERAL
+========================= */
+
+body.modo-oscuro {
+  background: var(--grad-fondo);
+  color: var(--texto);
+}
+
+body.modo-oscuro main {
+  background: var(--grad-fondo);
+}
+
+body.modo-oscuro .seccion-principal__izquierda {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+body.modo-oscuro .texto-hero p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .barra-superior__interior {
+    margin-left: 20px;
+    padding: 0 18px;
+  }
+
+  .navegacion {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .barra-superior__interior {
+    margin-left: 10px;
+    gap: 18px;
+  }
+
+  .marca__nombre {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .navegacion,
+  .marca-logo-escritorio {
+    display: none;
+  }
+
+  .logo-burger {
+    display: inline-flex;
+  }
+
+  .seccion-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-principal__derecha {
+    height: 360px;
+  }
+
+  .indicadores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .marca-logo-escritorio {
+    display: inline-flex;
+  }
+
+  .logo-burger {
+    display: none;
+  }
+
+  .menu-f1-offcanvas {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .barra-superior__interior {
+    height: 58px;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 14px;
+    margin-left: 0;
+  }
+
+  .marca__nombre,
+  .navegacion {
+    display: none;
+  }
+
+  .marca,
+  .marca-menu {
+    gap: 8px;
+  }
+
+  .marca img,
+  .barra-superior img,
+  .logo-burger img {
+    width: 58px;
+    height: 42px;
+    object-fit: contain;
+  }
+
+  .login-icono,
+  .boton-tema {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .login-icono i,
+  .boton-tema i {
+    font-size: 1rem;
+  }
+
+  .acciones-header {
+    gap: 10px;
+    margin: 0;
+  }
+
+  .cart-header-count {
+    top: -6px;
+    right: -7px;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    font-size: 0.62rem;
+    border-width: 1px;
+  }
+
+  .texto-hero h1 {
+    font-size: 28px;
+  }
+
+  .texto-hero p {
+    font-size: 15px;
+  }
+
+  .indicadores {
+    grid-template-columns: 1fr;
+  }
+
+  .fila-botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .barra-superior__interior {
+    padding: 0 12px;
+    gap: 6px;
+  }
+
+  .marca img,
+  .barra-superior img,
+  .logo-burger img {
+    width: 52px;
+    height: 38px;
+  }
+
+  .login-icono,
+  .boton-tema {
+    width: 32px;
+    height: 32px;
+  }
+
+  .texto-hero h1 {
+    font-size: 24px;
+  }
+
+  .seccion-principal__derecha {
+    height: 260px;
+  }
+}

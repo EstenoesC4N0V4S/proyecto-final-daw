@@ -1,0 +1,279 @@
+/* =========================
+   ERROR 404 BASE
+========================= */
+
+.error-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  transition: all 0.4s ease;
+}
+
+.error-container {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 50px 30px;
+  transition: all 0.4s ease;
+}
+
+/* =========================
+   MODO CLARO
+========================= */
+
+body:not(.modo-oscuro) .error-page {
+  background: radial-gradient(circle at top, rgba(225, 6, 0, 0.08), transparent 60%), #ffffff;
+}
+
+body:not(.modo-oscuro) .error-container {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body:not(.modo-oscuro) .error-title {
+  color: #1b1f24;
+}
+
+body:not(.modo-oscuro) .error-text {
+  color: rgba(27, 31, 36, 0.7);
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+
+body.modo-oscuro .error-page {
+  background: radial-gradient(circle at top, rgba(225, 6, 0, 0.08), transparent 60%), #0b0a0a;
+}
+
+body.modo-oscuro .error-container {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+}
+
+body.modo-oscuro .error-title {
+  color: #f4eeee;
+}
+
+body.modo-oscuro .error-text {
+  color: rgba(244, 238, 238, 0.7);
+}
+
+/* =========================
+   ELEMENTOS COMUNES
+========================= */
+
+.error-code {
+  font-size: 120px;
+  font-weight: 800;
+  color: #e10600;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 4px;
+  text-shadow: 0 0 25px rgba(225, 6, 0, 0.4);
+}
+
+.error-title {
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.error-text {
+  margin-bottom: 30px;
+}
+
+.error-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #e10600, #ff3c2f);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.error-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(225, 6, 0, 0.4);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .error-code {
+    font-size: 80px;
+  }
+}
+
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: white;
+  text-align: center;
+}
+
+.error-container {
+  max-width: 500px;
+  padding: 40px;
+}
+
+.error-icon i {
+  font-size: 60px;
+  color: #e10600;
+  margin-bottom: 20px;
+}
+
+.error-code {
+  font-size: 90px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.error-title {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.error-text {
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 30px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-error {
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-error-primary {
+  background: #e10600;
+  color: white;
+}
+
+.btn-error-secondary {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* BOTÓN SECUNDARIO EN MODO CLARO */
+body:not(.modo-oscuro) .btn-error-secondary {
+  background: rgba(0, 0, 0, 0.08);
+  color: #1b1f24; /* texto oscuro */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+body:not(.modo-oscuro) .btn-error-secondary:hover {
+  background: rgba(225, 6, 0, 0.1);
+  color: #e10600;
+  border-color: rgba(225, 6, 0, 0.4);
+}
+
+/* =========================
+   BOTONES ERROR BASE
+========================= */
+
+.btn-error {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.btn-error:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BOTÓN PRINCIPAL (ROJO)
+========================= */
+
+.btn-error-primary {
+  background: linear-gradient(180deg, #e10600, #b00000);
+  color: white;
+}
+
+/* =========================
+   BOTÓN SECUNDARIO
+========================= */
+
+body.modo-oscuro .btn-error-secondary {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+body:not(.modo-oscuro) .btn-error-secondary {
+  background: #f1f1f1;
+  color: #1b1f24;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* =========================
+   EFECTO LÁSER 🔥
+========================= */
+
+.btn-error::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 140%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 25%,
+    rgba(255,255,255,0.15),
+    rgba(225,6,0,0.45),
+    rgba(255,42,26,0.85),
+    rgba(225,6,0,0.45),
+    rgba(255,255,255,0.15),
+    transparent 75%
+  );
+
+  transform: skewX(-22deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ACTIVACIÓN DEL LÁSER */
+.btn-error:hover::before {
+  opacity: 1;
+  animation: laser-error 1.8s ease forwards;
+}
+
+/* ANIMACIÓN */
+@keyframes laser-error {
+  0% {
+    left: -140%;
+  }
+  100% {
+    left: 140%;
+  }
+}

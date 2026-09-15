@@ -1,0 +1,496 @@
+/* =========================
+   HEADER + BURGER + TOOLTIPS
+========================= */
+
+/* =========================
+   HEADER
+========================= */
+
+.acciones-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.login-icono,
+.boton-tema {
+  flex-shrink: 0;
+}
+
+/* =========================
+   BURGER
+========================= */
+
+.logo-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo-burger img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+}
+
+/* =========================
+   OFFCANVAS
+========================= */
+
+.menu-f1-offcanvas {
+  width: min(90vw, 380px) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu-f1-offcanvas .offcanvas-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu-f1-offcanvas .offcanvas-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-f1-offcanvas .offcanvas-body {
+  padding: 20px;
+}
+
+.menu-f1-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-f1-mobile-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 14px 16px 14px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-f1-mobile-nav a::before {
+  content: "";
+  width: 5px;
+  height: 22px;
+  margin-right: 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #e10600, #ff4b3e);
+}
+
+.menu-f1-mobile-nav a:hover {
+  transform: translateX(6px);
+}
+
+#titulo-f1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(225, 6, 0, 0.25);
+}
+
+#titulo-f1 span:first-child {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+#titulo-f1 span:last-child {
+  color: #e10600;
+}
+
+/* =========================
+   OFFCANVAS MODO CLARO
+========================= */
+
+body:not(.modo-oscuro) .menu-f1-offcanvas {
+  background:
+    radial-gradient(circle at top left, rgba(225, 6, 0, 0.08), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%) !important;
+  color: #181818;
+}
+
+body:not(.modo-oscuro) .menu-f1-offcanvas .offcanvas-title {
+  color: #181818;
+}
+
+body:not(.modo-oscuro) .menu-f1-mobile-nav a {
+  color: #181818;
+  background:
+    linear-gradient(135deg, rgba(225, 6, 0, 0.07), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+body:not(.modo-oscuro) .menu-f1-mobile-nav a:hover {
+  color: #e10600;
+  border-color: rgba(225, 6, 0, 0.35);
+}
+
+/* =========================
+   OFFCANVAS MODO OSCURO
+========================= */
+
+body.modo-oscuro .menu-f1-offcanvas {
+  background:
+    radial-gradient(circle at top left, rgba(225, 6, 0, 0.24), transparent 34%),
+    linear-gradient(180deg, #080808 0%, #180505 100%) !important;
+  color: #ffffff;
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .menu-f1-offcanvas .offcanvas-header {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.modo-oscuro .menu-f1-offcanvas .offcanvas-title {
+  color: #ffffff;
+}
+
+body.modo-oscuro .menu-f1-mobile-nav a {
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(225, 6, 0, 0.14), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+body.modo-oscuro .menu-f1-mobile-nav a:hover {
+  color: #ffffff;
+  border-color: rgba(225, 6, 0, 0.45);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.28),
+    0 0 22px rgba(225, 6, 0, 0.14);
+}
+
+/* =========================
+   BOTONES HERO + LASER
+========================= */
+
+.fila-botones {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contenedor-boton {
+  position: relative;
+  display: inline-flex;
+}
+
+.boton {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.boton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 145%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 28%,
+    rgba(255, 255, 255, 0.15),
+    rgba(225, 6, 0, 0.45),
+    rgba(255, 42, 26, 0.85),
+    rgba(225, 6, 0, 0.45),
+    rgba(255, 255, 255, 0.15),
+    transparent 72%
+  );
+  transform: skewX(-22deg);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+
+
+  animation: none;
+}
+
+.boton:hover::before {
+  opacity: 1;
+  animation: laser-boton 2s linear infinite;
+}
+
+@keyframes laser-boton {
+  0% {
+    left: -140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* =========================
+   TOOLTIP BOTONES HERO + LASER
+========================= */
+
+.tarjeta-hover {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  width: 260px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(10, 12, 16, 0.95);
+  color: #ffffff;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  font-weight: 500;
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  transform: translateX(-50%) translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+}
+
+.tarjeta-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 130%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(225, 6, 0, 0.65),
+    #ff2a1a,
+    rgba(225, 6, 0, 0.65),
+    transparent
+  );
+  opacity: 0.9;
+  filter: blur(0.4px);
+  box-shadow:
+    0 0 8px rgba(225, 6, 0, 0.75),
+    0 0 16px rgba(225, 6, 0, 0.35);
+}
+
+.tarjeta-hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: rgba(10, 12, 16, 0.95) transparent transparent transparent;
+}
+
+.contenedor-boton:hover .tarjeta-hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.contenedor-boton:hover .tarjeta-hover::before {
+  animation: laser-tooltip 2.7s linear infinite;
+}
+
+@keyframes laser-tooltip {
+  0% {
+    left: -130%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+/* =========================
+   TARJETA TELEMETRÍA
+========================= */
+
+.seccion-principal__derecha {
+  position: relative;
+}
+
+.tarjeta-flotante {
+  position: absolute;
+  right: 34px;
+  bottom: 34px;
+  width: 285px;
+  padding: 18px 18px 16px;
+  border-radius: 22px;
+  background: rgba(10, 12, 16, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  z-index: 5;
+}
+
+.tarjeta-flotante__titulo {
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.tarjeta-flotante__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+
+.tarjeta-flotante__fila:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tarjeta-flotante__fila span {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+}
+
+.tarjeta-flotante__fila strong {
+  color: #ffffff;
+  font-weight: 900;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* =========================
+   RESPONSIVE DESKTOP
+========================= */
+
+@media (min-width: 981px) {
+  .logo-burger {
+    display: none !important;
+  }
+
+  .marca-logo-escritorio {
+    display: inline-flex !important;
+  }
+
+  .menu-f1-offcanvas {
+    display: none !important;
+  }
+}
+
+/* =========================
+   RESPONSIVE TABLET / MÓVIL
+========================= */
+
+@media (max-width: 980px) {
+  .navegacion {
+    display: none !important;
+  }
+
+  .marca-logo-escritorio {
+    display: none !important;
+  }
+
+  .logo-burger {
+    display: inline-flex !important;
+  }
+
+  .barra-superior__interior {
+    margin-left: 0;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .acciones-header {
+    margin-left: auto;
+    margin-right: 0;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .barra-superior__interior {
+    height: 60px;
+  }
+
+  .logo-burger img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .login-icono,
+  .boton-tema {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+  }
+
+  .tarjeta-hover {
+    display: none;
+  }
+
+  .video-hero,
+  .capa-sombra,
+  .capa-grano,
+  .seccion-principal__derecha {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-burger img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .login-icono,
+  .boton-tema {
+    width: 34px;
+    height: 34px;
+  }
+
+  .acciones-header {
+    gap: 8px;
+  }
+}
